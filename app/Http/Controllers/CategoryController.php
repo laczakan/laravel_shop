@@ -51,7 +51,7 @@ class CategoryController extends Controller
             // Filename to store
             $fileNameToStore = uniqid() . '.' . $extention;
 
-            $path = $request->file('image')->storeAs('public/upload/categories', $fileNameToStore);
+            $request->file('image')->storeAs('public/upload/categories', $fileNameToStore);
         } else {
             $fileNameToStore = null;
         }
@@ -83,9 +83,9 @@ class CategoryController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            //get just extention
+            // Get just extention
             $extention = $request->file('image')->getClientOriginalExtension();
-            //filename to store
+            // Filename to store
             $fileNameToStore = uniqid() . '.' . $extention;
 
             $path = $request->file('image')->storeAs('public/upload/categories', $fileNameToStore);

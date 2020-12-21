@@ -6,8 +6,6 @@ use App\Models\Basket;
 use App\Models\BasketProduct;
 use App\Models\Order;
 use App\Models\OrderDetails;
-
-use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -53,12 +51,6 @@ class BasketController extends Controller
                 'quantity' => $request->input('quantity')
             ]
         );
-//        $basket_product = new BasketProduct();
-//        $basket_product->basket_id = $request->input('basket_id');
-//        $basket_product->product_id = $request->input('product_id');
-//        $basket_product->quantity = $request->input('quantity');
-//        $basket_product->updated_at = null;
-//        $basket_product->save();
 
         return redirect('/basket')->with('success', 'product added');
     }
