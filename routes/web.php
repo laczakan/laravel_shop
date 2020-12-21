@@ -21,7 +21,7 @@ use App\Http\Controllers\OrderController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::view('/', 'home.index');
 
 Route::get('/auth/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/auth', [AuthController::class, 'store']);
