@@ -21,6 +21,7 @@ class BasketController extends Controller
         if ($basket) {
             $basket_products = $basket->basketProducts;
 
+            // Calculate total amount in basket.
             $total = $basket_products->sum(function (BasketProduct $product) {
                 $price = $product->product->price;
                 return $price->multiply($product->quantity)->getAmount();
@@ -29,6 +30,7 @@ class BasketController extends Controller
 
         return view('basket.show')
             ->with('basket', $basket)
+            // Function money to convert in GBP
             ->with('total', money($total, 'GBP'));
     }
 

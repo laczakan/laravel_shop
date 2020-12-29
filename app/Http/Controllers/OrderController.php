@@ -8,6 +8,7 @@ use App\Models\Order;
 
 class OrderController extends Controller
 {
+    // Show order details
     public function show(Order $order)
     {
         $order_details = $order->orderDetails;

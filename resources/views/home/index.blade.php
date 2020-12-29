@@ -9,7 +9,7 @@
 @section('content')
 
     <h1 class="text-center">Laravel 8 + Bootstrap = Shop v8 by Andrzej Laczak</h1>
-
+    <h2 class="text-center">simple adding products/ create basket, orders, adding new products</h2>
     <p class="text-center">
         <img src="{{ asset('/img/shop.jpeg') }}" class="img-fluid" alt="Responsive image">
     </p>
