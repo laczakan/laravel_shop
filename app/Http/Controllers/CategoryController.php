@@ -84,9 +84,9 @@ class CategoryController extends Controller
 
         if ($request->hasFile('image')) {
             // Get just extention
-            $extention = $request->file('image')->getClientOriginalExtension();
+            $extension = $request->file('image')->getClientOriginalExtension();
             // Filename to store
-            $fileNameToStore = uniqid() . '.' . $extention;
+            $fileNameToStore = uniqid() . '.' . $extension;
 
             $path = $request->file('image')->storeAs('public/upload/categories', $fileNameToStore);
 

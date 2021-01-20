@@ -67,9 +67,9 @@ class UserController extends Controller
         }
         if ($request->hasFile('image')) {
 
-            $extention = $request->file('image')->getClientOriginalExtension();
+            $extension = $request->file('image')->getClientOriginalExtension();
 
-            $fileNameToStore = uniqid() . '.' . $extention;
+            $fileNameToStore = uniqid() . '.' . $extension;
 
             $path = $request->file('image')->storeAs('public/upload/users', $fileNameToStore);
         } else {
